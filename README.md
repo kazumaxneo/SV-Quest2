@@ -74,7 +74,7 @@ git clone https://github.com/kazumaxneo/SV-Quest2.git
 cd SV-Quest2/
 mkdir test && cp ISs.fna test/
 #fastq and ref.fasta file
-git clone git@github.com:kazumaxneo/SV-Quest.git
+git clone https://github.com/kazumaxneo/SV-Quest.git
 tar zxvf SV-Quest/sample.tar.gz -C test/
 cd test/
 SV-Quest_v2.2.6.pl -f chromosome.fasta -1 forward.fq -2 reverse.fq -b ISs.fna -n sample1 -y 4
