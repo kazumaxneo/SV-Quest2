@@ -56,11 +56,29 @@ SV-Quest.pl
     
 ## Run  
 1, prepare Tn sequernces.  
-To find endogenous IS transitions, endogenous IS multi-fasta file is necessary. We recommend using isescan program to identify endogenous IS sequernces.
+I recommned isescan program to identify endogenous IS sequernces from ref. genome. 
 ```
 mamba install -c bioconda isescan -y
-isescan.py --seqfile NC_012624.fna --output results --nthread 8
+isescan.py --seqfile reference.fna --output results --nthread 8
 ```
+The output directory xxx.fna.orf.fna is the DNA sequence of the IS detected.  
+
+2, Run SV-Quest2.  
+The IS sequence is specified with -b </path/to/file>.  
+The reference genome is specified with -f </path/to/file>. 
+```
+SV-Quest_v2.2.6.pl -f reference.fa -1 forward.fq -2 reverse.fq -b IS.fasta -n sample1 -y 4
+```
+## Test Run 
+git clone https://github.com/kazumaxneo/SV-Quest2.git
+cd SV-Quest2/
+mkdir test && cp ISs.fna test/
+#fastq and ref.fasta file
+git clone git@github.com:kazumaxneo/SV-Quest.git
+tar zxvf SV-Quest/sample.tar.gz -C test/
+cd test/
+SV-Quest_v2.2.6.pl -f chromosome.fasta -1 forward.fq -2 reverse.fq -b ISs.fna -n sample1 -y 4
+
 
 ## Licence ##
 
