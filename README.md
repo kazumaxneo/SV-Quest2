@@ -70,6 +70,7 @@ The reference genome is specified with -f </path/to/file>.
 SV-Quest_v2.2.6.pl -f reference.fa -1 forward.fq -2 reverse.fq -b IS.fasta -n sample1 -y 4
 ```
 ## Test Run 
+```
 git clone https://github.com/kazumaxneo/SV-Quest2.git
 cd SV-Quest2/
 mkdir test && cp ISs.fna test/
@@ -78,7 +79,7 @@ git clone https://github.com/kazumaxneo/SV-Quest.git
 tar zxvf SV-Quest/sample.tar.gz -C test/
 cd test/
 SV-Quest_v2.2.6.pl -f chromosome.fasta -1 forward.fq -2 reverse.fq -b ISs.fna -n sample1 -y 4
-
+```
 
 ## Licence ##
 
