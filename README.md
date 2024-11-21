@@ -37,7 +37,7 @@ Install Anaconda (Mac OS X, Linux).
 ```
 mamba create -n SV-Quest2 python=3.10 -y
 conda activate SV-Quest2
-mamba install -c bioconda bwa samtools sambamba spades
+mamba install -c bioconda bwa samtools sambamba spades blast
 sudo apt install mira-assembler
 ```
     
@@ -53,6 +53,8 @@ echo export PATH=\$PATH:`pwd`\ >> ~/.bash_profile && source ~/.bash_profile
 SV-Quest.pl
 ```
     
+## Run  
+To examine endogenous IS transitions,  IS fasta sequences are necessary. We recommend using isescan to call endogenous IS sequernces.
 
 
 ## Licence ##
