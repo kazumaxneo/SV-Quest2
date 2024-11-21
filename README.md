@@ -15,7 +15,7 @@ Outnput:
   indel and deletion position printed to STDOUT  
 
 Usage:  
-  perl SV-Quest.pl -f reference.fa -1 forward.fq -2 reverse.fq -b transposon.fasta -n sample1 -y 4
+  SV-Quest_v2.2.6.pl -f reference.fa -1 forward.fq -2 reverse.fq -b IS.fasta -n sample_prefix -y 4
 
 ########################################################################################
 
@@ -24,27 +24,29 @@ Usage:
 
 
     
-## Requirements  
+## 1. Requirements  
 - SAMTools  (version >= 1.3.1)  
 - BWA (version >= 0.7.17)  
 - sambamba  (version >= 0.8.0)
 - SPAdes  (version >= 3.14)
-- Minimap2  
+- Minimap2
+- Mirabait  
 
 
 
-Install Anaconda (Mac OS X, Linux).  
+Install Dependancy using conda package manager (macos, Linux(WSL)).  
 
 ```
 mamba create -n SV-Quest2 python=3.10 -y
 conda activate SV-Quest2
 mamba install -c bioconda bwa samtools sambamba spades blast minimap2
-sudo apt install mira-assembler
+#mirabait (using apt package maneger or download from Mirabait repositoru)
+sudo apt upgrade and apt install mira-assembler
 ```
     
 
 
-## Source
+## 2. clone source
 ```
 cd $HOME/bin/ 
 git clone https://github.com/kazumaxneo/SV-Quest2.git
@@ -53,8 +55,10 @@ chmod +x  SV-Quest_v2.2.6.pl
 echo export PATH=\$PATH:`pwd`\ >> ~/.bash_profile && source ~/.bash_profile
 SV-Quest.pl
 ```
-    
-## Run  
+  
+
+  
+## 3. Run  
 1, prepare Tn sequernces.  
 I recommned isescan program to identify endogenous IS sequernces from ref. genome. 
 ```
@@ -69,6 +73,10 @@ The reference genome is specified with -f </path/to/file>.
 ```
 SV-Quest_v2.2.6.pl -f reference.fa -1 forward.fq -2 reverse.fq -b IS.fasta -n sample1 -y 4
 ```
+  
+
+
+ 
 ## Test Run 
 ```
 git clone https://github.com/kazumaxneo/SV-Quest2.git
