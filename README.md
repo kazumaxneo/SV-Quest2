@@ -1,7 +1,7 @@
 ######################################################################################## 
 SV-Quest 2.0
 
-A Perl scripts to call indel position from mapped.bam.   
+A Perl scripts to call indel position and probable IS transposition from mapped.bam.   
 
 SV Quest: Sensitive Structure Variation detection tool
 
