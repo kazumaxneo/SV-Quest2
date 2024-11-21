@@ -37,6 +37,8 @@ Usage:
 Install Anaconda (Mac OS X, Linux).  
 
 ```
+mamba create -n SV-Quest2 python=3.10 -y
+conda activate SV-Quest2
 mamba install -c bioconda bwa samtools sambamba
 
 ```
