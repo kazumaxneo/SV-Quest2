@@ -17,9 +17,6 @@ Outnput:
 Usage:  
   perl SV-Quest.pl -f reference.fa -1 forward.fq -2 reverse.fq -b transposon.fasta -n sample1 -y 4
 
-
- The mapped.bam and it's reference.fasta should be included in the temp folder,  
- and copy the Indel_Hunter.pl in this folder.
 ########################################################################################
 
 
