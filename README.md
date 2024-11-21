@@ -55,8 +55,12 @@ SV-Quest.pl
 ```
     
 ## Run  
-To examine endogenous IS transitions,  IS fasta sequences are necessary. We recommend using isescan to call endogenous IS sequernces.
-
+1, prepare Tn sequernces.  
+To find endogenous IS transitions, endogenous IS multi-fasta file is necessary. We recommend using isescan program to identify endogenous IS sequernces.
+```
+mamba install -c bioconda isescan -y
+isescan.py --seqfile NC_012624.fna --output results --nthread 8
+```
 
 ## Licence ##
 
