@@ -28,7 +28,8 @@ Usage:
 - SAMTools  (version >= 1.3.1)  
 - BWA (version >= 0.7.17)  
 - sambamba  (version >= 0.8.0)
-- SPAdes  (version >= 3.14)  
+- SPAdes  (version >= 3.14)
+- Minimap2  
 
 
 
@@ -37,7 +38,7 @@ Install Anaconda (Mac OS X, Linux).
 ```
 mamba create -n SV-Quest2 python=3.10 -y
 conda activate SV-Quest2
-mamba install -c bioconda bwa samtools sambamba spades blast
+mamba install -c bioconda bwa samtools sambamba spades blast minimap2
 sudo apt install mira-assembler
 ```
     
