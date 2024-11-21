@@ -48,7 +48,7 @@ mamba install -c bioconda bwa samtools sambamba
 cd $HOME/bin/ 
 git clone https://github.com/kazumaxneo/SV-Quest2.git
 cd SV-Quest2/
-chmod +x SV-Quest.pl
+chmod +x  SV-Quest_v2.2.6.pl
 echo export PATH=\$PATH:`pwd`\ >> ~/.bash_profile && source ~/.bash_profile
 SV-Quest.pl
 ```
